@@ -36,7 +36,7 @@ var server = http.createServer(function(request, response){
   }
   else if(path == '/main.js'){
     response.setHeader('Content-Type', 'text/javascript; charset=utf-8')
-    response.write('console.log("hello")')
+    response.write('alert("hello")')
   }
   else{
     response.statusCode = 404
