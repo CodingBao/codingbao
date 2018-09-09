@@ -25,13 +25,17 @@ var server = http.createServer(function(request, response){
   console.log('方方说：不含查询字符串的路径为\n' + pathNoQuery)
 
 
+
   if(path == '/'){
+    response.setHeader('Content-Type', 'text/html; charset=utf-8')
     response.write('<!DOCTYPE html><html><head><link rel="stylesheet" href="/style.css"><script src="/main.js"></script></head><body><p>hello world</p></body></html>')
   }
   else if(path == '/style.css'){
+    response.setHeader('Content-Type', 'text/css; charset=utf-8')
     response.write('p {color: red}')
   }
   else if(path == '/main.js'){
+    response.setHeader('Content-Type', 'text/javascript; charset=utf-8')
     response.write('console.log("hello")')
   }
   else{
