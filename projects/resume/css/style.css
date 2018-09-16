@@ -1,28 +1,38 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-hr{
-    height: 0px;
-    border: 1px solid #9A9DA2;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-body{
+li {
+    list-style: none;
+}
+
+hr {
+    height: 0;
+    border: none;
+    border-top: 1px solid #DEDEDE;
+}
+
+body {
     background-color: #efefef;
 }
 
-.clearfix::after{
+.clearfix::after {
     display: block;
     clear: both;
     content: '';
 }
 
-.topNavBar{
+.topNavBar {
     padding: 0 16px;
 }
 
-header{
+header {
     padding: 20px 0px;
     position: fixed;
     top: 0;
@@ -30,42 +40,42 @@ header{
     width: 100%;
 }
 
-.topNavBar a{
+.topNavBar a {
     text-decoration: none;
 }
 
-.topNavBar nav{
-    float: right; 
+.topNavBar nav {
+    float: right;
     padding: 3px 0px 4px 0px;
 }
 
-.topNavBar nav ul{
-    list-style:none; 
+.topNavBar nav ul {
+    list-style: none;
     margin: 0;
-    padding:0; 
+    padding: 0;
 }
 
-.topNavBar nav ul > li{
-    float: left; 
+.topNavBar nav ul>li {
+    float: left;
     margin: 0px 17px;
 }
 
-.topNavBar nav ul li > a{
-    color: rgba(255,255,255,0.7);
+.topNavBar nav ul li>a {
+    color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
     border-top: 3px solid transparent;
-    border-bottom:3px solid transparent;
+    border-bottom: 3px solid transparent;
     padding: 5px;
     display: block;
     font-weight: bold;
 }
 
-.topNavBar nav ul li > a:hover{
-    border-bottom-color:#e06567;
+.topNavBar nav ul li>a:hover {
+    border-bottom-color: #e06567;
 }
 
-.topNavBar .logo{
-    float: left; 
+.topNavBar .logo {
+    float: left;
     font-family: "Hiragino Kaku Gothic Std";
     font-size: 22px;
     padding: 3px 0px 4px 0px;
@@ -74,31 +84,30 @@ header{
 .topNavBar .logo .rs {
     color: #e6686a;
     margin-right: 4px;
-  }
-  
+}
+
 .topNavBar .logo .card {
     color: #9A9DA2;
 }
 
-.banner{
+.banner {
     background-image: url(../images/rs-cover.jpg);
     height: 515px;
     background-position: center center;
     background-size: cover;
 }
 
-.banner .mask{
+.banner .mask {
     height: 515px;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.userCard{
-    border: 1px solid red;
+.userCard {
     max-width: 949px;
     margin: 0 auto;
 }
 
-.userCard .welcome{
+.userCard .welcome {
     background: #e06567;
     color: white;
     display: inline-block;
@@ -107,45 +116,80 @@ header{
     position: relative;
 }
 
-.userCard .welcome .triangle{
+.userCard .welcome .triangle {
     position: absolute;
     display: inline-block;
     border: 10px solid transparent;
-    border-left-color:#e06567;
+    border-left-color: #e06567;
     border-top-width: 0px;
     top: 100%;
     left: 4px;
 }
 
-.userCard .photo{
+.userCard .photo {
     float: left;
 }
 
-.userCard .info{
+.userCard .info {
     float: left;
     margin-left: 65px;
     width: 470px;
 }
 
-.userCard .info h1{
+.userCard .info h1 {
     font-weight: bold;
     padding-top: 32px;
 }
 
-.userCard .maininfo{
+.userCard .maininfo {
     padding: 50px 50px;
 }
 
+.userCard dl {
+    padding-top: 25px;
+}
+
 .userCard dl dt,
-.userCard dl dd{
+.userCard dl dd {
     float: left;
     padding: 5px 0;
 }
 
-.userCard dl dt{
+.userCard dl dt {
     width: 30%;
+    font-weight: bold;
 }
 
-.userCard dl dd{
+.userCard dl dd {
     width: 70%;
+    color: #9da0a7;
+}
+
+.userCard .info p {
+    padding: 10px 0px 24px 0px;
+}
+
+.userCard .media {
+    background-color: #e4696c;
+    text-align: center;
+}
+
+.userCard .media a {
+    display: inline-block;
+    width: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    border-radius: 50%;
+    margin: 16px;
+}
+
+.userCard .media a:hover {
+    background: #CF5D5F;
+}
+
+.userCard svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align: top;
 }
