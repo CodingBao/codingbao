@@ -1,6 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+hr{
+    height: 0px;
+    border: 1px solid #9A9DA2;
+}
+
 body{
-    background-color: black;
-    margin: 0;
+    background-color: #efefef;
 }
 
 .clearfix::after{
@@ -10,7 +19,15 @@ body{
 }
 
 .topNavBar{
-    padding: 20px 16px;
+    padding: 0 16px;
+}
+
+header{
+    padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .topNavBar a{
@@ -59,6 +76,76 @@ body{
     margin-right: 4px;
   }
   
-  .topNavBar .logo .card {
+.topNavBar .logo .card {
     color: #9A9DA2;
-  }
+}
+
+.banner{
+    background-image: url(../images/rs-cover.jpg);
+    height: 515px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner .mask{
+    height: 515px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.userCard{
+    border: 1px solid red;
+    max-width: 949px;
+    margin: 0 auto;
+}
+
+.userCard .welcome{
+    background: #e06567;
+    color: white;
+    display: inline-block;
+    padding: 4px 16px;
+    line-height: 22px;
+    position: relative;
+}
+
+.userCard .welcome .triangle{
+    position: absolute;
+    display: inline-block;
+    border: 10px solid transparent;
+    border-left-color:#e06567;
+    border-top-width: 0px;
+    top: 100%;
+    left: 4px;
+}
+
+.userCard .photo{
+    float: left;
+}
+
+.userCard .info{
+    float: left;
+    margin-left: 65px;
+    width: 470px;
+}
+
+.userCard .info h1{
+    font-weight: bold;
+    padding-top: 32px;
+}
+
+.userCard .maininfo{
+    padding: 50px 50px;
+}
+
+.userCard dl dt,
+.userCard dl dd{
+    float: left;
+    padding: 5px 0;
+}
+
+.userCard dl dt{
+    width: 30%;
+}
+
+.userCard dl dd{
+    width: 70%;
+}
