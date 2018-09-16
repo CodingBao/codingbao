@@ -1,0 +1,39 @@
+body{
+    background-color: gray;
+}
+
+div {
+    width: 100px;
+    height: 50px;
+    border-radius: 100%;
+    border-width: 0px 0px 50px 0px;
+    border-color:white;
+    border-style:solid;
+    background-color: black;
+    position:relative;
+}
+
+div:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: black;
+    border: 19px solid white;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+}
+
+div:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: white;
+    border: 19px solid black;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+}
+
