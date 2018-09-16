@@ -2,7 +2,8 @@ body{
     background-color: gray;
 }
 
-div {
+#taiji{
+    margin: 100px;
     width: 100px;
     height: 50px;
     border-radius: 100%;
@@ -11,9 +12,13 @@ div {
     border-style:solid;
     background-color: black;
     position:relative;
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-div:before {
+#taiji:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -25,7 +30,7 @@ div:before {
     height: 12px;
 }
 
-div:after {
+#taiji:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -37,3 +42,11 @@ div:after {
     height: 12px;
 }
 
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
