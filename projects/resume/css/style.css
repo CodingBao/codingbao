@@ -99,10 +99,15 @@ header {
 
 .banner .mask {
     height: 515px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);   
+}
+
+body>main{
+    margin-top: -300px;
 }
 
 .userCard {
+    background: white;
     max-width: 949px;
     margin: 0 auto;
 }
@@ -192,4 +197,73 @@ header {
     height: 30px;
     fill: white;
     vertical-align: top;
+}
+
+body > main .downloadBox{
+    text-align: center;
+}
+
+body > main .downloadResume{
+    font-size: 16px;
+    font-weight: bold;
+    color: #3d4451;
+    padding: 21px 55px;
+    display: inline-block;
+    border: 1px solid #9da0a7;
+    border-radius: 2px;
+    margin: 32px auto;
+    transition: box-shadow 1s;
+}
+
+body > main .downloadResume:hover{
+    box-shadow: 2px 2px 16px -1px rgba(0,0,0,0.75);
+}
+
+body > main .selfIntro{
+    max-width: 949px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body > main .proSkills{
+    max-width: 949px;
+    margin: 0 auto;
+}
+
+body > main .proSkills h1{
+    text-align: center;
+}
+
+body > main .proSkills .skillBox{
+    max-width: 949px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 42px 40px;
+}
+
+body > main .proSkills .skillBox:hover{
+    box-shadow: 2px 2px 16px -1px rgba(0,0,0,0.75);
+}
+
+.skillItem{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+
+.skillItem:nth-child(even){
+    float: right
+}
+
+body > main .proSkills .skillBox .progressBar{
+    height: 5px;
+    background: yellow;
+    margin: 4px 0 40px 0;
+}
+
+body > main .proSkills .skillBox .progressBar > .progress{
+    width: 50%;
+    height: 5px;
+    background: #CF5D5F;
 }
