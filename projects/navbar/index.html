@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        kbd {
+            position: relative;
+            border: 1px solid red;
+            width: 4em;
+            height: 4em;
+            display: inline-block;
+        }
+        
+        body {
+            text-align: center;
+        }
+        
+        #mainxxx {
+            position: relative;
+            border: 1px solid blue;
+            display: inline-block;
+        }
+        
+        #mainxxx:nth-child(3) {
+            position: absolute;
+            left: 2em;
+        }
+        
+        #mainxxx:nth-child(4) {
+            position: absolute;
+            left: 2em;
+        }
+        
+        kbd>button {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: none;
+        }
+        
+        kbd:hover>button {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="mainxxx">
+
+    </main>
+
+    <script>
+        var hash1 = [
+            ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+            ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+            ['z', 'x', 'c', 'v', 'b', 'n', 'm']
+        ]
+
+        var hashLoc = {};
+        var hashInLocalStorage = JSON.parse(localStorage.getItem('save') || 'null')
+        if (hashInLocalStorage) {
+            hashLoc = hashInLocalStorage
+        }
+        var index = 0
+        while (index < hash1.length) {
+            var box = document.createElement("div")
+            mainxxx.appendChild(box)
+            box.id = index
+            var index2 = 0;
+            while (index2 < hash1[index].length) {
+                var kbdbox = document.createElement("kbd")
+                box.appendChild(kbdbox)
+                kbdbox.textContent = hash1[index][index2]
+
+                var btn = document.createElement("button")
+                btn.textContent = "Edit"
+                kbdbox.appendChild(btn)
+                btn.id = hash1[index][index2]
+                btn.onclick = function (xxx) {
+                    console.log(xxx.target.id)
+                    var newUrl = prompt("输入新的网址")
+                    hashLoc[xxx.target.id] = newUrl
+                    localStorage.setItem("save", JSON.stringify(hashLoc))
+                }
+                index2++
+            }
+            index++
+        }
+
+        document.onkeypress = function (xxx) {
+
+            var loc = hashLoc[xxx.key]
+            console.log(xxx.key, hashLoc[xxx.key])
+            window.open(hashLoc[xxx.key], '_blank')
+        }
+    </script>
+</body>
+
+</html>
