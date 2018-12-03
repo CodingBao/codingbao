@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#canvas{
+    background-color: gray;
+}
+
+#eraser{
+    position: fixed;
+    left:0;
+    top:0;
+}
