@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,29 @@
     <link rel="stylesheet" href="./style.css">
     <title>我的画板</title>
 </head>
+
 <body>
+    <div class="menu">
+        <div class="menulist">
+            <button id="save">save</button>
+            <button id="pen" class="actived">pen</button>
+            <button id="eraser">eraser</button>
+            <button id="clear">clear</button>
+        </div>
+        <ul>
+            <li class="colors" id="red"></li>
+            <li class="colors" id="green"></li>
+            <li class="colors" id="blue"></li>
+            <li class="colors" id="nonecolor"></li>
+        </ul>
+        <div class="sizeChange">
+            <button id="reduce">-</button>
+            <input type="text" id="lineWidthNum">
+            <button id="add">+</button>
+        </div>
+    </div>
     <canvas id="canvas"></canvas>
-    <button id="eraser">橡皮擦</button>
     <script src="./main.js"></script>
 </body>
+
 </html>
